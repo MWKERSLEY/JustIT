@@ -723,6 +723,123 @@ footer {
     
 }
 
-@media screen and (min-width: 481px) and (max-width: 480px) {
+@media screen and (min-width: 481px) and (max-width: 640px) {
+    .navC, .navShowing, nav li a, nav li {
+        color: white;
+        opacity: 1;
+        margin: 0;
+        padding: 0;
+        float: none;
+        display: block;
+        outline-style: none !important;
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -o-transition: none !important;
+        -ms-transition: none !important;
+        -webkit-transform: none !important;
+        -moz-transform: none !important;
+        -o-transform: none !important;
+        -ms-transform: none !important;
+        transform: none !important;
+        transition: none !important;
+        
+    }
     
+    .navBtn {
+        font-size: 2.5em;
+        display: block;
+        width: 12%;
+        margin: 0 2vw 0 75vw;
+        padding: 0 10px !important;
+        text-align: center;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.2);
+        
+    }
+    
+    .menu-item a {
+        padding: 15px 0 15px 20px;
+        color: white;
+    }
+    
+    .menu-items li {
+        border-top: 3px solid rgba(0, 0, 0, 0.2);
+    }
+    
+    .bgImage div:not(:first-child):not(.actionB):not(.logoC), .menu-items {
+        display: none;
+    }
+    
+    .logoC {
+        top: 20vh;
+        left: 17.3vw;
+        text-align: center !important;
+    }
+    
+    .actionB {
+        position: relative;
+        top: 70vh;
+        left: 18vw;
+    }
+    
+    .newCollectionB {
+        font-size: 1.2em;
+        color: white;
+        border: 2px solid rgba(0, 0, 0, 0.4);
+        background-color: rgba(54, 91, 70, 0.9);
+        
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -o-transition: none !important;
+        -ms-transition: none !important;
+        -webkit-transform: none !important;
+        -moz-transform: none !important;
+        -o-transform: none !important;
+        -ms-transform: none !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    
+    .featuredP {
+        width: 80%;
+        height: 100%;
+        margin: 0 auto 40px auto !important;
+        padding: 0 30px;
+        column-count: 1;
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        -o-column-count: 1;
+        -ms-column-count: 1;
+    }
+    
+    .pDetail {
+        
+        margin: 0 auto 40px auto !important;
+    }
+    
+    .featuredText {
+        text-align: center;
+        padding: 0 30px;
+        
+    }
+    
+    .productBox img {
+        width: 80%;
+    }
+    
+    #products:(first-child) {
+        padding: 20px 0;
+    }
+    
+    .navC {
+        width: 100%;
+    }
+
+    .container {
+        margin: 20px auto;
+    }
+    
+    .section4 img {
+        width: 100%;
+    }
 }
