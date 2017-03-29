@@ -1,0 +1,211 @@
+body {
+    font-family: 'Ek Mukta', sans-serif;
+    font-size: 1em; /*dont use px for modern websites*/
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /*makes sure there is no scrollbar*/
+    z-index: -1000;
+    
+}
+
+.container {
+    width: 80%;
+    margin: 200px auto;
+    text-align: center;
+}
+
+.navC {
+    position: fixed;
+/*    top: 0vh;*/
+    right: 0vw;
+    /*width: 40%;*/
+    background-color: rgba(54, 91, 70, 0.3);
+    padding: 5px 0 5px 50%;
+    z-index: 1000;
+}
+
+nav a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 5px;
+}
+
+nav a:hover {
+    color: black;
+}
+
+nav li {
+    float: left;
+    display: inline;
+    padding: 0 20px;
+}
+
+.bgImage {
+    background-image: url(img/prettyWoman.jpg);
+    position: relative; /*to position elements, elements are then absolute, otherwise elements position relative to screen*/
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 0;
+    width: 100%;
+    height: 100vh;
+    border-bottom: 15px solid rgba(54, 91, 70, 0.8);
+    
+}
+
+.logoC {
+    position: absolute;
+    top: 60px;
+    left: 20vw;
+}
+
+.actionB {
+    position: absolute;
+    top: 70vh;
+    left: 30vw;
+}
+/*
+#products {
+    clear: both;
+    width: 100%;
+    height: 100vh;
+}*/
+
+.productBox {
+    position: relative;
+    display: block;
+    width: 90%;
+    /*float: left;*/
+    /*border: 5px;
+    margin: 5px;*/
+}
+
+.newCollectionB {
+    color: black;
+    padding: 5px 20px;
+    line-height: 20px;
+    border-radius: 5px 5px;
+    -webkit-border-radius: 5px 5px;/*chrome safari*/
+    -moz-border-radius: 5px 5px;/*mozilla firefox*/
+    -o-border-radius: 5px 5px;/*opera*/
+    -ms-border-radius: 5px 5px;/*microsoft ie*/
+    cursor: pointer;
+    background-color: rgba(54, 91, 70, 0.5);
+    border: 2px solid rgba(54, 91, 70, 0.5);
+    -webkit-transition: background-color 1000ms ease-out;/*chrome safari*/
+    -moz-transition: background-color 1000ms ease-out;/*mozilla firefox*/
+    -o-transition: background-color 1000ms ease-out;/*opera*/
+    -ms-transition: background-color 1000ms ease-out;/*microsoft ie*/
+    transition: background-color 1000ms ease-out;
+}
+
+.newCollectionB:hover { /*when mouse hovers over*/
+    color: darkgreen;
+    background-color: rgba(54, 91, 70, 0.2);
+}
+
+#sales {
+    clear: both;
+}
+
+/*.mouse {
+    position: absolute;
+    display: block;
+    top: 92%;
+}*/
+
+.pDetails {
+    font-size: 0.8em;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.price {
+    display: block;
+    text-align: center;
+}
+
+.featureP {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px 30px;
+    column-count: 3;
+    z-index: -100;
+}
+
+.container > h1, .container > p {
+    text-align: center;
+}
+
+.scrollB {
+    position: absolute;
+    /*bottom: 10vh;
+    left: 50%;*/
+    width: 100%;
+    margin: 200px auto;
+    text-align: center;
+    bottom: 20vh;
+    font-size: 3em;
+}
+
+/*.featuredPsales {
+    height: 100%;
+    margin: 0 auto 50px auto;
+    padding: 20px 30px;
+    column-count: 3;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    -o-column-count: 3;
+    -ms-column-count: 3;
+    float: left;
+}*/
+
+/*.productSales {
+    position: relative;
+    display: block;
+    margin: 10 auto;
+}*/
+
+.shoppingB {
+    display: block;
+    margin: 20px 0 0 0;
+    border: 1px solid #ccc;
+    height: 204px;
+}
+
+.deliveryO {
+    width: 98%;
+    margin: 50px auto;
+    padding: 30px 0 30px 20px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    clear: both;
+}
+
+.wrapper {
+    height: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    column-count: 4;
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    -o-column-count: 4;
+    -ms-column-count: 4;
+}
+
+.wrapper img {
+    display: block;
+    margin: 0 auto;
+}
+/*
+.productSales {
+    display: block;
+    margin: 0 auto;
+}*/
