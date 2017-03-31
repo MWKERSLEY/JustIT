@@ -1,0 +1,165 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+header {
+    position: relative;
+}
+
+h1, h2 {
+    padding: 5px;
+    margin: 10px auto 0 auto;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    position: relative;
+    background-color: darkslategray;
+}
+
+.footerDiv {
+    margin: 10px;
+    display: block;
+}
+
+.sitemap {
+    column-count: 3;
+}
+
+.sitemap div {
+    text-align: left;
+}
+
+.logoC {
+    float: left;
+    width: auto;
+    height: 100px;
+    display: inline;
+}
+
+.searchC {
+    position: relative;
+    float: right;
+    display: inline;
+}
+
+.search {
+    display: inline;
+    height: 100%;
+}
+
+.search input {
+    display: inline;
+}
+
+.menus {
+    position: relative;
+    clear: both;
+}
+
+.navC {
+    float: left;
+    width: 35%;
+    background-color: darkslategray;
+    
+}
+
+.navC nav {
+    display: inline;
+    width: 30%;
+}
+
+.navC li {
+    position: relative;
+    left: 10%;
+    list-style: none;
+    padding: 5px;
+    margin: 5px auto 5px 10%;
+    border-style: none;
+}
+
+.navC li:not(:first-child) {
+    border-style: solid;
+    border-bottom: thin;
+    border-left: thin;
+    border-right: thin;
+    
+}
+
+.weAre {
+    position: absolute;
+    right: 30%;
+    z-index: 5000;
+}
+
+.right {
+    position: absolute;
+    right: 40px;
+}
+
+.refinery {
+    position: absolute;
+    height: auto;
+    width: 40%;
+    right: 10%;
+}
+
+.linksC {
+    clear: both;
+    text-align: center;
+    clear: both;
+    column-count: 3;
+}
+
+.linkA {
+    height: 200px;
+    display: block;
+}
+
+.linksBlock {
+    position: relative;
+    width: 200px;
+    left: 20px;
+    display: block;
+}
+
+.linksHeader {
+    position: relative;
+    left: -80px;
+    top: 100px;
+    background-color: darkslategray;
+    display: block;
+    transform:rotate(270deg);
+    width: 200px;
+}
+
+.linksC a {
+    display: block;
+    font-size: 0.9em;
+    color: dodgerblue;
+    width: 200;
+}
+
+.lower {
+    clear: both;
+}
+
+.lowerLeft {
+    float: left;
+    width: 400px;
+}
+
+.lowerRight {
+    float: left;
+    width: 200px;
+}
+
+.lowerRight a {
+    display: block;
+}

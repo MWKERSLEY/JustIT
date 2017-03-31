@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<!--The HTML lang attribute can be used to declare the language of a Web page or a portion of a Web page. This is meant to assist search engines and browsers-->
+<html lang="en">
+    
+    <head>
+        
+        <!--That meta tag basically specifies what character set is your website written with UTF-8 (U from Universal Character Set + Transformation Format—8-bit) is a character encoding capable of encoding all possible characters (called code points) in Unicode. The encoding is variable-length and uses 8-bit code units-->
+        <!--Specifies the character encoding for the HTML document-->
+        <!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">-->
+        <meta charset="utf-8">
+        
+        <!--The viewport is the part of the webpage that the user can currently see. The scrollbars move the viewport to show other parts of the page. I believe the ViewPort is just an area to display the web content in the Browser.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--The description is what will appear in the search engines as a brief description of your webpage/website, just under your heading or title on the search enginer resultes.-->
+        <meta name="description" content="This is a fictional webpage for train HTML5, CSS3 and JavaScript">
+        
+        <!--Still debatable is still of use, some search engines are ignoring it now-->
+        <meta name="keywords" content="Just IT, training, HTML5, CSS3, JavaScritp, webdesign, webpage, front end development">
+        <meta name="author" content="Manuel Cubuca for training purpose only">
+        
+        <!--The title is what you see and is displayed in the browser window-->
+        <title>The Vintage Apparel Company</title>
+        
+        <!--The link below is to display a little icon logo next to the title of your webpage when viewing on the browser-->
+        <!--<link rel="shortcut icon" href="img/favicons/favicon.ico">-->
+        
+        <!--Link to google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Ek+Mukta" 				rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        
+        <!--This the CDN link for Font Awesome icons
+        A content delivery network (CDN) is a system of distributed servers (network) that deliver webpages and other Web content to a user based on the geographic locations of the user, the origin of the webpage and a content delivery server-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+        
+        <!--Here you linking an external CSS file to your HTML document-->
+        <link rel="stylesheet" type="text/css" href="css/myStyles.css">
+        
+    </head>
+    
+    <body id="top">
+        
+        <!-- Home Section
+================================================== -->
+        
+        <section id="home" class="section1">
+            <header>
+                
+                
+                
+                <div id="remParallax" class="bgImage"><!--class="bgImage"-->
+                    
+                    <div class="navC">
+                        <span class="navBtn">&#9776;</span>
+                        <nav class="hideM">
+                            <ul class="menu-items">
+                                <li class="mainNav "><a href="#home">Home</a></li>
+                                <li class="mainNav "><a href="#products">Products</a></li>
+                                <li class="mainNav "><a href="#about">About</a></li>
+                                <li class="mainNav "><a href="#contact">Contact</a></li>
+                                <li class="mainNav "><a href="#sales">Sales</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <div class="logoC">
+                        <img src="img/logo.png" class="logo" alt="The company logo" />
+                    </div>
+                    <div class="actionB">
+                        <button id="newCB" class="newCollectionB">NEW ARRIVALS<br><span>Watch Video <i class="fa fa-play-circle" aria-hidden="true"></i></span></button>
+                    </div>
+                    <div class="hand"><i class="fa fa-2x fa-hand-o-right" aria-hidden="true"></i>
+                    </div>
+                    <div class="scrollDownC">
+				        <a class="scrollD" href="#products">
+					       <span class="mouse"></span>
+				        </a>
+			         </div>
+                    <!--
+                    <video class="bgVideo" autoplay loop>
+                      <source src="video/vintageClothing.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>-->
+                </div>
+                <!--
+                <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/PGrIBEfTkLw?ecver=2" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>-->
+            </header>
+        </section>
+
+        <!-- Home Section ends
+================================================== -->    
+                
+                
+        <!-- Navigation Section
+================================================== -->
+        
+       <!-- <section>    
+                <div class="navLinks">
+                    <div class="logoSmallC">
+                            <img src="img/logoSmall.png" class="logoSmall" alt="The company logo">
+                    </div>
+                    <div class="navC">
+                        <nav>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Featured Products</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Products</a></li>
+                                <li><a href="#">Testimonials</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+        </section>-->
+
+        <!-- Navigation Section ends
+================================================== -->
+        
+        
+        <!-- Featured Products Section
+================================================== -->
+        
+        <section id="products" class="container FPS section2">
+            <h1>Featured Products</h1>
+            
+            <p class="featuredPText">All the best and unique vintage collection at exclusive PRICES!</p>
+            
+            <div class="featuredP">
+            <article class="productBox">
+                    <a href="#"><img src="featuredProducts/image1.jpg" alt="vintage clothing">
+                <figcaption class="pDetail">Reclaimed Vintage Sweat Dress With Back Lace Up<strong class="price">£65.00</strong>
+                </figcaption></a>
+                </article>
+            <article class="productBox">
+                <a href="#"><img src="featuredProducts/image2.jpg" alt="vintage clothing">
+                <figcaption class="pDetail">Reclaimed Vintage Inspired Off The Shoulder Swing Dress In Lace<strong class="price">£40.00</strong>
+                    </figcaption></a>
+                </article>
+            <article class="productBox">
+                <a href="#"><img src="featuredProducts/image3.jpg" alt="vintage clothing">
+                <figcaption class="pDetail">Reclaimed Vintage Revived Military Jacket With Rolling Stones Tour Back Print<strong class="price">£65.00</strong>
+                    </figcaption></a>
+                </article>
+            </div>
+            <div class="featuredP">
+            <article class="productBox">
+                <a href="#"><img src="featuredProducts/image4.jpg" alt="vintage clothing">
+                <figcaption class="pDetail">Reclaimed Vintage Inspired Jacket And Trousers In Red Check <strong class="price">FROM £113.00</strong>
+                    </figcaption></a>
+                </article>
+            <article class="productBox">
+                <a href="#"><img src="featuredProducts/image5.jpg" alt="vintage clothing">
+                <figcaption class="pDetail">Reclaimed Vintage Revived Camo BDU Military Jacket <strong class="price">£45.00</strong>
+                    </figcaption></a>
+                </article>
+            <article class="productBox">
+                <a href="#"><img src="featuredProducts/image6.jpg" alt="vintage clothing">
+                <figcaption class="pDetail">Reclaimed Vintage Inspired Super Oversized Bomber Jacket In Black With Ram Back Print<strong class="price">£105.00</strong>
+                    </figcaption></a>
+                </article>
+            </div>
+        </section>
+        
+        
+        
+
+        <!-- Featured Products ends
+================================================== -->
+        
+        
+        <!-- Promotion and Sales Section
+================================================== -->
+        
+        <section id="sales" class="container section3">
+            
+            <h1>Promotion and Sales</h1>
+            
+        <p class="featuredPText">Drag the items to the shopping basket and get up to 50% DISCOUNT!</p>
+            
+            <div class="featuredPSales">
+            <article class="productSales">
+                <a href="#"><img src="salesProducts/trainers1.jpg" alt="vintage clothing">
+                <figcaption class="pDetailSales">Asics Gel-Lyte MT Winter Trainers<strong class="price">NOW £90.00</strong>
+                    </figcaption></a>
+                </article>
+                <article class="productSales">
+                <a href="#"><img src="salesProducts/trainers2.jpg" alt="vintage clothing">
+                <figcaption class="pDetailSales">adidas Originals Tubular Instinct BO Trainers<strong class="price">NOW £81.00</strong>
+                    </figcaption></a>
+                </article>
+            <article class="productSales">
+                <a href="#"><img src="salesProducts/trainers3.jpg" alt="vintage clothing">
+                <figcaption class="pDetailSales">Vans Old Skool Trainers In Beige <strong class="price">NOW £52.00</strong>
+                    </figcaption></a>
+                </article>
+                
+            </div> 
+            <aside class="shoppingB"><span class="shoppingText">Shopping Cart</span></aside>
+            
+            <article id="deliveryO" class="deliveryO"><strong>PREMIER DELIVERY</strong> – UNLIMITED NEXT-DAY DELIVERY
+AND CLICK &amp; COLLECT FOR £9.95 A YEAR</article>
+            
+            <div class="deliveryForm">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet turpis nec turpis laoreet volutpat. Vivamus euismod pulvinar lacus a molestie. Ut sit amet elit felis. Nunc aliquam enim eros, sed commodo urna commodo eget. Sed fermentum quis leo sit amet consectetur. Ut ornare pretium velit sed molestie. Vivamus mauris ex, cursus vel commodo ac, aliquet vitae nisl. Etiam eleifend massa arcu, vel lacinia magna malesuada quis. Maecenas bibendum erat lectus, nec dignissim est gravida id. Nulla facilisi. Cras eu erat et arcu lacinia pulvinar et sit amet quam. Donec vehicula rhoncus felis sed malesuada. Vestibulum semper convallis commodo.</p>
+ 
+            </div>
+        
+        </section>
+
+        <!-- Promotion and Sales ends
+================================================== -->
+        
+        
+        <!-- About Section
+================================================== -->
+        
+        <section id="about" class="container section4">
+        
+
+        <h1>About</h1>
+            
+        <div class="aboutText">
+            
+         <article>   
+            
+        <p>At Vintage Apparel Co. we provide superior customer service, with a commitment to deliver distinctive products of the highest quality. Our clothing and promotional items communicate a classic, retro influence. Keeping a watchful eye on trends and styles, our in-house graphic designers work to create a unique company, group or team identity – one that sets you apart from the rest.</p>
+            
+        </article>
+            
+        <article>
+
+        <img src="img/factory1.jpeg" alt="The Vintage Apparel Factory">
+            
+        </article>
+        </div>
+        </section>
+
+        <!-- Products ends
+================================================== -->
+        
+        
+        <!-- Contact Section
+================================================== -->
+        
+        <section id="contact" class="container section5">
+        
+        
+        <h1>Contact</h1>
+            
+            <div class="formC">
+                <form id="contactForm"><!--novalidate-->
+                    <div class="">
+                        <div class="">
+                            <label>Name</label><br>
+                            <input required type="text" class="inputFields" id="name">
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="">
+                            <label>Email</label><br>
+                            <input required type="email" class="inputFields" id="email">
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="">
+                            <label>Message</label><br>
+                            <textarea required rows="10" cols="" class="inputFields" id="message" maxlength="999" style="resize:none"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div id="success">
+                    </div>
+
+                    <div id="submitButtonDiv">
+                        <button type="submit" id="submitButton" class="sendB">Send Message</button>
+                    </div>
+                </form>
+                </div>
+            
+            
+        <aside class="ourLocation">
+            <div>
+                
+                
+            </div>    
+        </aside>
+        
+        </section>
+
+        <!-- Testimonials ends
+================================================== -->
+        
+        
+        
+        
+        
+        
+        <!-- Footer
+================================================== -->
+        <footer>
+            <div class="socialMedia">
+            <i class="fa fa-linkedin logoSpace" aria-hidden="true"></i><i class="fa fa-twitter  logoSpace" aria-hidden="true"></i><i class="fa fa-facebook  logoSpace" aria-hidden="true"></i><i class="fa fa-instagram  logoSpace" aria-hidden="true"></i>
+            </div>
+            <div class="ourAddress">
+            <!--<address>Main Office: 150 Minories, London, UK</address>-->
+            <span>Copyright © The Vintage Apparel Company</span>
+            </div> 
+        </footer>
+
+        <!-- Footer ends
+================================================== -->
+        
+        
+        <!-- Modal code
+================================================== -->
+        <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <!--<video class="myVideo" width="854" height="480" controls autoplay>
+                  <source src="video/vintageClothing.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>-->
+                <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/PGrIBEfTkLw?ecver=2" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+            </div>
+          </div>
+
+        </div>
+        
+        
+        <!-- Modal ends
+================================================== -->
+
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous"></script>
+
+        <script src="js/myScript.js"></script>
+        <script src="js/jqBootstrapValidation.js"></script>
+        <script src="js/contact_me.js"></script>
+        
+    </body>
+    
+</html>
