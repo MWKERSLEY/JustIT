@@ -248,10 +248,74 @@ for (i = 0; i < myDeliveryForm.length; i++) {
   }
 }
 
+//The Drag and Drop JavaScript code
+
+document.addEventListener("DOMContentLoaded", myDragandDrop, false);
+
+function myDragandDrop() {
+    
+    var trainersImages = document.getElementsByClassName("productSales");
+    var shoppingDropArea = document.getElementById("shoppingcart");
+    var theShoppingCart = document.querySelectorAll("#shoppingcart ul")[0];
+    
+    for (var i = 0; i < trainersImages.length; i++) {
+        
+        trainersImages[i].addEventListener("dragstart", function(ev) {
+            
+            ev.dataTransfer.effectAllowed = "copy";
+            ev.dataTransfer.setData("Text", this.getAttribute("id"));
+            console.log(this.id);
+        }, false);
+    }
+    
+    shoppingDropArea.addEventListener("dragover", function(ev) {
+        
+        if (ev.preventDefault)
+            ev.preventDefault();
+        ev.dataTransfer.dropEffect = "copy";
+        return false;
+        
+    }, false);
+    
+    shoppingDropArea.addEventListener("drop", function(ev) {
+        
+        if (ev.preventDefault)
+            ev.preventDefault();
+        var trainerId = ev.dataTransfer.getData("Text");
+        var element = document.getElementById(trainerId);
+        
+        addTrainerToShoppingCart(element, trainerId);
+        ev.stopPropagation();
+        
+        alert(document.getElementById("cart").style.height);
+        alert(document.getElementById("shoppingcart").style.height);
+        
+        document.getElementById("shoppingcart").style.height = "100%";
+        
+        return false;
+        
+    }, false);
+    
+    function addTrainerToShoppingCart(item, id) {
+        var displayData = id + " " + item.getAttribute("data-price");
+        
+        var myli = document.createElement("li");
+        myli.innerHTML = displayData;
+        theShoppingCart.appendChild(myli);
+    }
+    
+}
 
 
+//register button
+var registerButton = document.getElementById("registerButton");
 
+registerButton.addEventListener("click", register, false);
 
+function register() {
+    localStorage.setItem("name", "myName");
+    alert("name added locally")
+}
 
 
 

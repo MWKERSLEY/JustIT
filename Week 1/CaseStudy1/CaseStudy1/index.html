@@ -3,7 +3,15 @@
 <!--The HTML lang attribute can be used to declare the language of a Web page or a portion of a Web page. This is meant to assist search engines and browsers-->
 <html lang="en">
     
-    <head>
+    <head> <!--
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">-->
+        <style>
+          /* Always set the map height explicitly to define the size of the div
+           * element that contains the map. */
+          #map {
+            height: 100%;
+          }
+        </style>
         
         <!--That meta tag basically specifies what character set is your website written with UTF-8 (U from Universal Character Set + Transformation Format—8-bit) is a character encoding capable of encoding all possible characters (called code points) in Unicode. The encoding is variable-length and uses 8-bit code units-->
         <!--Specifies the character encoding for the HTML document-->
@@ -180,31 +188,46 @@
         <p class="featuredPText">Drag the items to the shopping basket and get up to 50% DISCOUNT!</p>
             
             <div class="featuredPSales">
-            <article class="productSales">
-                <a href="#"><img src="salesProducts/trainers1.jpg" alt="vintage clothing">
+            <article class="productSales" id="Asics Gel-Lyte MT Winter Trainers" data-price=" £90.00">
+                <a href="#"><img id="trainer1" src="salesProducts/trainers1.jpg" alt="vintage clothing">
                 <figcaption class="pDetailSales">Asics Gel-Lyte MT Winter Trainers<strong class="price">NOW £90.00</strong>
                     </figcaption></a>
                 </article>
-                <article class="productSales">
-                <a href="#"><img src="salesProducts/trainers2.jpg" alt="vintage clothing">
+                <article class="productSales" id="adidas Originals Tubular Instinct 80 Trainers" data-price=" £81.00">
+                <a href="#"><img id="trainer2" src="salesProducts/trainers2.jpg" alt="vintage clothing">
                 <figcaption class="pDetailSales">adidas Originals Tubular Instinct BO Trainers<strong class="price">NOW £81.00</strong>
                     </figcaption></a>
                 </article>
-            <article class="productSales">
-                <a href="#"><img src="salesProducts/trainers3.jpg" alt="vintage clothing">
+            <article class="productSales" id="Vans Old Skool Trainers In Beige" data-price=" £52.00">
+                <a href="#"><img id="trainer3" src="salesProducts/trainers3.jpg" alt="vintage clothing">
                 <figcaption class="pDetailSales">Vans Old Skool Trainers In Beige <strong class="price">NOW £52.00</strong>
                     </figcaption></a>
                 </article>
                 
             </div> 
-            <aside class="shoppingB"><span class="shoppingText">Shopping Cart</span></aside>
+            <aside id="shoppingcart" class="shoppingB">
+                <span class="shoppingText">Shopping Cart</span>
+                <ul class="myPriceList" id="cart"></ul>
+            </aside>
             
-            <article id="deliveryO" class="deliveryO"><strong>PREMIER DELIVERY</strong> – UNLIMITED NEXT-DAY DELIVERY
-AND CLICK &amp; COLLECT FOR £9.95 A YEAR</article>
+            <article id="deliveryO" class="deliveryO"><strong>PREMIER DELIVERY</strong> – UNLIMITED NEXT-DAY DELIVERY AND CLICK &amp; COLLECT FOR £9.95 A YEAR</article>
             
             <div class="deliveryForm">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet turpis nec turpis laoreet volutpat. Vivamus euismod pulvinar lacus a molestie. Ut sit amet elit felis. Nunc aliquam enim eros, sed commodo urna commodo eget. Sed fermentum quis leo sit amet consectetur. Ut ornare pretium velit sed molestie. Vivamus mauris ex, cursus vel commodo ac, aliquet vitae nisl. Etiam eleifend massa arcu, vel lacinia magna malesuada quis. Maecenas bibendum erat lectus, nec dignissim est gravida id. Nulla facilisi. Cras eu erat et arcu lacinia pulvinar et sit amet quam. Donec vehicula rhoncus felis sed malesuada. Vestibulum semper convallis commodo.</p>
- 
+                <h1>First Name</h1>
+                <form id="registerForm"><!--novalidate-->
+                    <div class="">
+                        <div class="">
+                            <label>Name</label><br>
+                            <input required type="text" class="inputFields" id="registerName">
+                        </div>
+                    </div>
+
+                    <div id="submitButtonDiv">
+                        <button type="submit" id="registerButton" class="sendB">Send Message</button>
+                    </div>
+                </form>
+              <p>   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet turpis nec turpis laoreet volutpat. Vivamus euismod pulvinar lacus a molestie. Ut sit amet elit felis. Nunc aliquam enim eros, sed commodo urna commodo eget. Sed fermentum quis leo sit amet consectetur. Ut ornare pretium velit sed molestie. Vivamus mauris ex, cursus vel commodo ac, aliquet vitae nisl. Etiam eleifend massa arcu, vel lacinia magna malesuada quis. Maecenas bibendum erat lectus, nec dignissim est gravida id. Nulla facilisi. Cras eu erat et arcu lacinia pulvinar et sit amet quam. Donec vehicula rhoncus felis sed malesuada. Vestibulum semper convallis commodo.</p>
+
             </div>
         
         </section>
@@ -281,10 +304,8 @@ AND CLICK &amp; COLLECT FOR £9.95 A YEAR</article>
             
             
         <aside class="ourLocation">
-            <div>
-                
-                
-            </div>    
+               <div id="map"></div>
+
         </aside>
         
         </section>
@@ -345,7 +366,132 @@ AND CLICK &amp; COLLECT FOR £9.95 A YEAR</article>
         <script src="js/myScript.js"></script>
         <script src="js/jqBootstrapValidation.js"></script>
         <script src="js/contact_me.js"></script>
-        
+        <script>
+          // Note: This example requires that you consent to location sharing when
+          // prompted by your browser. If you see the error "The Geolocation service
+          // failed.", it means you probably did not give permission for the browser to
+          // locate you.
+
+            /*geolocation*/
+/*          function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: 51.4973343, lng: -0.1259522},
+              zoom: 6
+            });
+            var infoWindow = new google.maps.InfoWindow({map: map});
+
+            // Try HTML5 geolocation.
+            if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(function(position) {
+                var pos = {
+                  lat: position.coords.latitude,
+                  lng: position.coords.longitude
+                };
+
+                infoWindow.setPosition(pos);
+                infoWindow.setContent('Location found.');
+                map.setCenter(pos);
+              }, function() {
+                handleLocationError(true, infoWindow, map.getCenter());
+              });
+            } else {
+              // Browser doesn't support Geolocation
+              handleLocationError(false, infoWindow, map.getCenter());
+            }
+          }
+
+          function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(browserHasGeolocation ?
+                                  'Error: The Geolocation service failed.' :
+                                  'Error: Your browser doesn\'t support geolocation.');
+          }*/
+            
+            
+            
+            /*marker*/
+/*      function initMap() {
+        var myLatLng = {lat: -25.363, lng: 131.044};
+
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLng,
+          scrollwheel: false,
+          zoom: 4
+        });
+
+        // Create a marker and set its position.
+        var marker = new google.maps.Marker({
+          map: map,
+          position: myLatLng,
+          title: 'Hello World!'
+        });
+      }*/
+            
+            /*direction*/
+      function initMap() {
+          var start = {lat: 51.5048943, lng: -0.0876006};
+          
+            var map = new google.maps.Map(document.getElementById('map'), {
+              center: start,
+              scrollwheel: false,
+              zoom: 7
+            });
+/*
+          if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(function(position) {
+                start = {
+                  lat: position.coords.latitude,
+                  lng: position.coords.longitude
+                };
+
+                infoWindow.setPosition(start);
+                infoWindow.setContent('Location found.');
+                map.setCenter(start);
+              }, function() {
+                handleLocationError(true, infoWindow, map.getCenter());
+              });
+            } else {
+              // Browser doesn't support Geolocation
+              handleLocationError(false, infoWindow, map.getCenter());
+            }*/
+          
+        /*var start = {lat: 51.5048943, lng: -0.0876006};*/
+        var minories = {lat: 51.513303, lng: -0.0765472};
+
+        var directionsDisplay = new google.maps.DirectionsRenderer({
+          map: map
+        });
+
+        // Set destination, origin and travel mode.
+        var request = {
+          destination: minories,
+          origin: start,
+          travelMode: 'DRIVING'
+        };
+
+        // Pass the directions request to the directions service.
+        var directionsService = new google.maps.DirectionsService();
+        directionsService.route(request, function(response, status) {
+          if (status == 'OK') {
+            // Display the route on the map.
+            directionsDisplay.setDirections(response);
+          }
+        });
+/*
+          function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(browserHasGeolocation ?
+                                  'Error: The Geolocation service failed.' :
+                                  'Error: Your browser doesn\'t support geolocation.');*/
+      }
+
+
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOcAbzvDD7hKKHWFm44J5XRxynyzLxkBI&callback=initMap">
+        </script>   
+
     </body>
     
 </html>
