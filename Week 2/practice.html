@@ -1,0 +1,200 @@
+<!--This is my JS practice file-->
+<script>
+    //Normal function in JS
+/*    function createMessage() {
+        alert("I am text");
+        console.log("Just say hi");
+    }
+    
+    //call function
+    createMessage();
+    */
+    
+    
+    /*x, y parameters*/
+/*    function myFunction(x, y) {
+        var myVar = x*y;
+        console.log(myVar);
+    }
+    
+    myFunction(2, 3);
+    myFunction(25, 7);*/
+    
+    
+/*    function myFunction(x, y) {
+        var myVar = x*y;
+        console.log(myVar);
+        //the return key takes the value out of the function
+        return myVar;
+    }
+    
+    var myResult = myFunction(3, 6);
+    console.log(myResult);*/
+    
+/*    //local
+    function simpleF () {
+        //local variable
+        var foo = 400;
+        console.log(foo);
+    }
+    simpleF();
+    //outside scope
+    console.log(foo);*/
+    
+    //global
+/*    var foo;
+    function simpleF () {
+        //local variable
+        foo = 400;
+        console.log(foo);
+    }
+    simpleF();
+    //outside scope
+    console.log(foo);*/
+    
+    /*This is an example of an anonymous function expression*/
+/*    
+    var firstF = function(x, y) {
+        return x*y;
+    }; //anonymous functions must end with a semicolon
+    
+    function secondF () {
+        var result;
+        result = firstF(2, 3);
+        console.log(result);
+    }
+    
+    secondF();
+    console.log(secondF);
+    console.log(firstF);*/
+    
+/*    var selfI = (function(x, y) {
+        var num1 = 10;
+        var num2 = 20;
+        return num1*num2;
+    } () );
+    
+    console.log(selfI);*/
+    
+    /*Selections*/
+    
+/*    var book = "maths";
+    
+    if(book=="history") {
+        document.write("<b>History book</b>");
+    } else if (book == "maths") {
+        document.write("<b>Maths book</b>");
+    } else {
+        document.write("<b>unknown book</b>");
+    }*/
+    
+    /*The switch statement*/
+/*    grade = "C";
+    document.write("Your grade is<br>")
+    switch (grade) {
+        case "A": 
+            document.write("very good");
+            break;
+        case "B": 
+            document.write("good");
+            break;
+        case "C": 
+            document.write("ok");
+            break;
+        case "D": 
+            document.write("bad");
+            break;
+        case "F": 
+            document.write("unacceptable");
+            break;
+        default: 
+            document.write("unknown");
+            break;
+    }
+    document.write("<br>Reflect on this");*/
+    
+    /*for loop*/
+/*    var count;
+    document.write("Starting loop" + "<br>");
+    for (count = 0; count<10; count++) {
+        document.write("Current count: " + count + "<br>");
+    }
+    document.write("Loop stops" + "<br>");*/
+    
+    //the break keyword in a loop
+    /*
+    document.write("Starting loop" + "<br>");
+    var x=1;
+    while(x<20) {
+        if (x==5) {
+            break;
+        }
+        x = x+1;
+        x--;
+        x+=1;
+        document.write(x + "<br>");
+    }
+    document.write("Loop stops" + "<br>");
+    */
+    /*The continue keyword in a loop*/
+    /*
+    document.write("Starting loop" + "<br>");
+    var x=1;
+    while(x<10) {
+        x = x+1;
+        x--;
+        x+=1;
+        if (x==5) {
+            //break;
+            continue;//skip the rest of the loop
+        }
+        document.write(x + "<br>");
+    }
+    document.write("Loop stops" + "<br>");*/
+    
+    /*while loop*/
+/*    var count=0;
+    document.write("Starting loop" + "<br>");
+    while(count<10) {
+        document.write("Current count: "+ count + "<br>");
+        count++;
+    }
+    document.write("Loop stops" + "<br>");*/
+    
+    /*do while loop*/
+/*    var count=0;
+    document.write("Starting loop" + "<br>");
+    do {
+        document.write("Current count: "+ count + "<br>");
+        count++;
+    } while(count<5);
+    document.write("Loop stops" + "<br>");*/
+    
+    /*arrays*/
+    
+/*    var arr = ['bmw', 'audi', 'ford', 'merc'];
+    //length
+    document.write("array length is " + arr.length);
+    
+    cars[0]; bmw
+    cars[1];audi
+    cars[2];ford*/
+    
+    
+    /*array methods*/
+    //push
+/*    var num = [1,4,9];
+    var length = num.push(10);
+    document.write("New number is: " + num);*/
+    //pop
+    /*var num = [1,4,9];
+    var length = num.pop();
+    document.write("New number is: " + num);*/
+    //shift - move first element in an array
+    /*var num = [150,7,8,9,10].shift();
+    document.write("New number is: " + num);*/
+    //sort
+/*    var element = ["apple","pear","banana","orange"];
+    var sort = element.sort();
+    document.write("New number is: " + sort);*/
+</script>
